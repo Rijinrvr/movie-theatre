@@ -1,0 +1,12 @@
+extend layout
+
+block content
+    img.mt-2(src=`${movie.imageurl}`, alt="Movie image")
+    h1.text-info.mt-5 Movie Name: #{movie.title}
+    p.text-success Treater Name: #{movie.treaterName}
+    h3.text-danger Price: #{movie.price}
+        hr
+    a.btn.btn-success.mx-3(href='/view/edit/'+movie._id) Edit
+        a.btn.btn-danger(href='/view/delete/'+movie._id, onclick="return confirm('Are you sure?')") Delete
+
+        

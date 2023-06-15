@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .container.mt-5
+        form(action='/edit/'+movie._id method='post')
+            .mb-3
+                h3 MOVIE UPDATES
+                label.form-label(for='exampleInputEmail1') Movie Name
+                input#exampleInputEmail1.form-control(type='text' value=movie.title name='title')
+            .mb-3
+                label.form-label(for='exampleInputPassword1') Image Url
+                input#exampleInputPassword1.form-control(type='text' value=movie.imageurl name='imageurl')
+            .mb-3
+                label.form-label(for='exampleInputPassword1') Treater Name
+                input#exampleInputPassword1.form-control(type='text' value=movie.treaterName name='treaterName')
+            .mb-3
+                label.form-label(for='exampleInputPassword1') Price
+                input#exampleInputPassword1.form-control(type='number' value=movie.price name='price')
+            button.btn.btn-primary(type='submit') Submit

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .container.mt-5
+        form(action='/add' method='post')
+            .mb-3
+                h3 Add Movies
+                label Title
+                input#exampleInputEmail1.form-control(type='text' name='title')
+            .mb-3
+                label Image Url
+                input#exampleInputPassword1.form-control(type='text' name='imageurl')
+            .mb-3
+                label Treater Name
+                input#exampleInputPassword1.form-control(type='text' name='treaterName')
+            .mb-3
+                label Price
+                input#exampleInputPassword1.form-control(type='number' name='price')
+            button.btn.btn-primary(type='submit') Submit
